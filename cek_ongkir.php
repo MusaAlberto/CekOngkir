@@ -53,8 +53,8 @@ for ($k=0; $k < count($data['rajaongkir']['results']); $k++) {
 			<tr>
 				<th>No.</th>
 				<th>Jenis Layanan</th>
-				<th>ETD</th>
 				<th>Tarif</th>
+				<th>Estimasi Sampai (ETD)</th>
 			</tr>
 			<?php
 			for ($l=0; $l < count($data['rajaongkir']['results'][$k]['costs']); $l++) {
@@ -65,8 +65,8 @@ for ($k=0; $k < count($data['rajaongkir']['results']); $k++) {
 						<div style="font:bold 16px Arial"><?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['service'];?></div>
 						<div style="font:normal 11px Arial"><?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['description'];?></div>
 					</td>
-					<td>&nbsp;<?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['etd'];?> days</td>
 					<td><?php echo number_format($data['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['value']);?></td>
+					<td>&nbsp;<?php echo $data['rajaongkir']['results'][$k]['costs'][$l]['cost'][0]['etd'];?> days</td>
 				</tr>
 				<?php
 			}
